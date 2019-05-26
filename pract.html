@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h3> DOM </h3>
+    <h3>CLASS ASSIGNMENT </h3>   
+    <h4>Filza Mujtaba cmad 18A</h4>
+
+ <div class="table"> 
+        <table border="1">
+            <thead>
+                    <tr>
+                         <th>Index</th>
+                         <th>Name</th>
+                         <th>Class</th>
+                         <th>percentages</th>
+                        </tr> 
+                    </thead>
+                <tbody id="usertable">
+                  <!-- record will be shown here by js -->
+                </tbody>        
+        </table>
+
+    <script>
+    
+
+        var stdId= [0,1,2,3,4,5];
+        var stdClass= [10, 9, 8, 12 , 11];
+        var stdName= ["Alia Zaidi", "Warda kanwal", "Filza Mujtaba","Ali khan","Muhammad kashif"];
+        var percentage=["90%","80%","70%","75%","70%",]
+      
+        for(i=0; i< stdName.length; i++){
+        document.getElementById("usertable").innerHTML +=  `
+             <tr id=${i}>
+                <td> ${stdId[i]} </td>
+                <td> ${stdName[i]} </td>
+                <td> ${stdClass[i]} </td>
+                <td> ${percentage[i]} </td>
+            </tr>
+             `}
+             var getrow = document.getElementsByTagName("tr");
+             for(i=0 ; i<= stdName.length ; i+=2){
+                 getrow[i].style.backgroundColor = "black";
+                 getrow[i].style.color = "white";
+             }
+      
+    </script>
+
+
+</body>
+</html>
